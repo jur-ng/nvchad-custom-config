@@ -9,6 +9,7 @@ M.treesitter = {
     "javascript",
     "typescript",
     "tsx",
+    "python",
     "c",
     "markdown",
     "markdown_inline",
@@ -38,6 +39,9 @@ M.mason = {
     -- c/cpp stuff
     "clangd",
     "clang-format",
+
+    -- python stuff
+    "pyright",
   },
 }
 

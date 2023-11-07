@@ -4,29 +4,29 @@ local capabilities = require("plugins.configs.lspconfig").capabilities
 local lspconfig = require "lspconfig"
 
 lspconfig.cssmodules_ls.setup {
-    on_attach = on_attach,
-    capabilities = capabilities,
-    init_options = {
-        camelCase = true,
-    },
+  on_attach = on_attach,
+  capabilities = capabilities,
+  init_options = {
+    camelCase = true,
+  },
 }
 
 lspconfig.cssls.setup {
-    on_attach = on_attach,
-    capabilities = capabilities,
-    settings = {
-        css = {
-            lint = {
-                validProperties = {
-                    "composes"
-                }
-            }
-        }
-    }
+  on_attach = on_attach,
+  capabilities = capabilities,
+  settings = {
+    css = {
+      lint = {
+        validProperties = {
+          "composes",
+        },
+      },
+    },
+  },
 }
 
 -- if you just want default config for the servers then put them in a table
-local servers = { "html", "tsserver", "clangd" }
+local servers = { "html", "tsserver", "clangd", "pyright" }
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
@@ -34,6 +34,3 @@ for _, lsp in ipairs(servers) do
     capabilities = capabilities,
   }
 end
-
--- 
--- lspconfig.pyright.setup { blabla}
