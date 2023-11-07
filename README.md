@@ -28,6 +28,7 @@ and then run the following one-liner to install NvChad with this custom config:
 ```
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && https://github.com/jur-ng/nvchad-custom-config.git ~/.config/nvim/lua/custom --depth 1 && nvim
 ```
+You might need to execute `:MasonInstallAll` after.
 
 ### If you already have NvChad installed:
 
@@ -36,3 +37,4 @@ Simply run:
 ```
 https://github.com/jur-ng/nvchad-custom-config.git ~/.config/nvim/lua/custom --depth 1 && nvim
 ```
+You might need to execute `:MasonInstallAll` after.
