@@ -7,6 +7,7 @@ My custom config for NvChad. Currently adds at least the following:
 - Adds the "compose" property to cssls
 - CSS formatting through postcss
 - JS formatting through eslint
+- Tokyo all the things
 
 ## Installation
 
