@@ -16,7 +16,7 @@ My custom config for NvChad. Currently adds at least the following:
 First install the custom dependencies through `npm` _globally_:
 
 ```
-npm install -g postcss postcss-cli eslint
+npm install -g postcss postcss-cli cssmodules-language-server
 ```
 
 ### If you dont have NvChad installed yet:
