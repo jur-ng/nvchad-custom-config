@@ -1,4 +1,4 @@
-local overrides = require("custom.configs.overrides")
+local overrides = require "custom.configs.overrides"
 
 ---@type NvPluginSpec[]
 local plugins = {
@@ -25,7 +25,7 @@ local plugins = {
   -- override plugin configs
   {
     "williamboman/mason.nvim",
-    opts = overrides.mason
+    opts = overrides.mason,
   },
 
   {
@@ -45,6 +45,13 @@ local plugins = {
     config = function()
       require("better_escape").setup()
     end,
+  },
+
+  {
+    "razak17/tailwind-fold.nvim",
+    opts = {},
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+    ft = { "html", "svelte", "astro", "vue", "typescriptreact" },
   },
 
   -- To make a plugin not be loaded
