@@ -19,7 +19,6 @@ local postcss_formatter = {
 local sources = {
 
   -- webdev stuff
-  b.formatting.deno_fmt, -- choosed deno for ts/js files cuz its very fast!
   b.formatting.prettier.with { filetypes = { "html", "markdown" } }, -- so prettier works only on these filetypes,
   b.formatting.eslint,
   postcss_formatter,
@@ -40,7 +39,12 @@ null_ls.setup {
         group = augroup,
         buffer = bufnr,
         callback = function()
-          vim.lsp.buf.format { bufnr = bufnr }
+          vim.lsp.buf.format {
+            bufnr = bufnr,
+            filter = function(fmt_client)
+              return fmt_client.name ~= "tsserver"
+            end,
+          }
         end,
       })
     end
