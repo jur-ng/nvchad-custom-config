@@ -20,7 +20,6 @@ local sources = {
 
   -- webdev stuff
   b.formatting.prettier.with { filetypes = { "html", "markdown" } }, -- so prettier works only on these filetypes,
-  b.formatting.eslint,
   postcss_formatter,
   -- Lua
   b.formatting.stylua,
@@ -39,12 +38,7 @@ null_ls.setup {
         group = augroup,
         buffer = bufnr,
         callback = function()
-          vim.lsp.buf.format {
-            bufnr = bufnr,
-            filter = function(fmt_client)
-              return fmt_client.name ~= "tsserver"
-            end,
-          }
+          vim.lsp.buf.format { bufnr = bufnr }
         end,
       })
     end

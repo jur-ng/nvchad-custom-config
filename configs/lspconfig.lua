@@ -37,6 +37,24 @@ lspconfig.pylsp.setup {
   },
 }
 
+lspconfig.eslint.setup {
+  on_attach = function(client, bufnr)
+    vim.api.nvim_create_autocmd("BufWritePre", {
+      buffer = bufnr,
+      command = "EslintFixAll",
+    })
+  end,
+  capabilities = capabilities,
+  filetypes = {
+    "javascript",
+    "javascriptreact",
+    "javascript.jsx",
+    "typescript",
+    "typescriptreact",
+    "typescript.tsx",
+  },
+}
+
 lspconfig.tsserver.setup {
   on_attach = on_attach,
   capabilities = capabilities,
