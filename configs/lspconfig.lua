@@ -37,8 +37,18 @@ lspconfig.pylsp.setup {
   },
 }
 
+lspconfig.tsserver.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = {
+    "typescript",
+    "typescriptreact",
+    "typescript.tsx",
+  },
+}
+
 -- if you just want default config for the servers then put them in a table
-local servers = { "html", "tsserver", "clangd" }
+local servers = { "html", "clangd" }
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
