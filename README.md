@@ -6,8 +6,7 @@ My custom config for NvChad. Currently adds at least the following:
 - CSS modules LSP
 - Adds the "compose" property to cssls
 - CSS formatting through postcss
-- JS formatting through eslint
-- Tokyo all the things
+- JS,JSX,TS,TSX formatting through eslint
 
 ## Installation
 
@@ -16,7 +15,7 @@ My custom config for NvChad. Currently adds at least the following:
 First install the custom dependencies through `npm` _globally_:
 
 ```
-npm install -g postcss postcss-cli cssmodules-language-server
+npm install -g postcss postcss-cli cssmodules-language-server vscode-langservers-extracted
 ```
 
 ### If you dont have NvChad installed yet:
@@ -28,6 +27,7 @@ and then run the following one-liner to install NvChad with this custom config:
 ```
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && git clone https://github.com/jur-ng/nvchad-custom-config.git ~/.config/nvim/lua/custom --depth 1 && nvim
 ```
+
 You might need to execute `:MasonInstallAll` after.
 
 ### If you already have NvChad installed:
@@ -37,4 +37,5 @@ Simply run:
 ```
 git clone https://github.com/jur-ng/nvchad-custom-config.git ~/.config/nvim/lua/custom --depth 1 && nvim
 ```
+
 You might need to execute `:MasonInstallAll` after.
