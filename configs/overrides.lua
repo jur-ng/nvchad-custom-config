@@ -61,4 +61,11 @@ M.nvimtree = {
   },
 }
 
+M.bettertserrors = {
+  keymaps = {
+    toggle = "<leader>ts", -- default '<leader>dd'
+    go_to_definition = "<leader>td", -- default '<leader>dx'
+  },
+}
+
 return M

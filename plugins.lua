@@ -54,6 +54,13 @@ local plugins = {
     ft = { "html", "svelte", "astro", "vue", "typescriptreact" },
   },
 
+  {
+    "OlegGulevskyy/better-ts-errors.nvim",
+    dependencies = { "MunifTanjim/nui.nvim" },
+    opts = overrides.bettertserrors,
+    ft = { "typescript", "typescriptreact" },
+  },
+
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",
