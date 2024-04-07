@@ -61,6 +61,16 @@ M.nvimtree = {
   },
 }
 
+M.comment = {
+  pre_hook = function()
+    return vim.bo.commentstring
+  end
+}
+
+M.tscontextcommentstring = {
+  enable_autocmd = false,
+}
+
 M.bettertserrors = {
   keymaps = {
     toggle = "<leader>ts", -- default '<leader>dd'

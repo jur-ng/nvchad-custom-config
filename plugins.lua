@@ -61,6 +61,17 @@ local plugins = {
     ft = { "typescript", "typescriptreact" },
   },
 
+  {
+    'numToStr/Comment.nvim',
+    opts = overrides.comment,
+    lazy = false,
+  },
+
+
+  {
+    "JoosepAlviste/nvim-ts-context-commentstring",
+    lazy = false,
+  },
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",
