@@ -65,6 +65,12 @@ lspconfig.tsserver.setup {
   },
 }
 
+lspconfig.rust_analyzer.setup {
+  settings = {
+    ["rust-analyzer"] = {},
+  },
+}
+
 -- if you just want default config for the servers then put them in a table
 local servers = { "html", "clangd" }
 
