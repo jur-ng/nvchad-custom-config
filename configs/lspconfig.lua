@@ -29,6 +29,7 @@ lspconfig.basedpyright.setup {
   settings = {
     basedpyright = {
       typeCheckingMode = "standard",
+      reportWildcardImportFromLibrary = "none",
     },
   },
 }
