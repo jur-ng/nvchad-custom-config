@@ -18,6 +18,8 @@ First install the custom dependencies through `npm` _globally_:
 npm install -g postcss postcss-cli cssmodules-language-server vscode-langservers-extracted
 ```
 
+For based-pyright we also need to `pip install basedpyright`
+
 ### If you dont have NvChad installed yet:
 
 First install all the
