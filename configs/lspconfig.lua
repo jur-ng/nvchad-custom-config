@@ -25,14 +25,10 @@ lspconfig.cssls.setup {
   },
 }
 
-lspconfig.pylsp.setup {
+lspconfig.basedpyright.setup {
   settings = {
-    pylsp = {
-      plugins = {
-        flake8 = {
-          enabled = true,
-        },
-      },
+    basedpyright = {
+      typeCheckingMode = "standard",
     },
   },
 }
