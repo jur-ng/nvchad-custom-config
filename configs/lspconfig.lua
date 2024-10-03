@@ -33,14 +33,10 @@ lspconfig.basedpyright.setup {
         autoSearchPaths = true,
         useLibraryCodeForTypes = true,
         autoImportCompletions = true,
-        diagnosticsMode = "openFilesOnly", -- workspace, openFilesOnly
         diagnosticSeverityOverrides = {
           reportUnknownMemberType = false,
           reportUnknownArgumentType = false,
           reportWildcardImportFromLibrary = false,
-          -- reportUnusedClass = "warning",
-          -- reportUnusedFunction = "warning",
-          reportUndefinedVariable = false, -- ruff handles this with F822
         },
       },
     },
