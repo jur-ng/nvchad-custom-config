@@ -21,6 +21,10 @@ lspconfig.cssls.setup {
           "composes",
         },
       },
+      format = {
+        enable = true,
+        indentSize = 4,
+      },
     },
   },
 }
